@@ -1,0 +1,17 @@
+/* pages/index.module.css */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.title {
+  color: #0070f3;
+  font-size: 2rem;
+  border-bottom: 2px solid #eaeaea;
+}
+
+.description {
+  color: #666;
+  line-height: 1.5;
+}

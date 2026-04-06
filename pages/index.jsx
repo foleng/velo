@@ -1,21 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from '../lib/link';
-import { useRouter } from '../lib/router-context';
 
-export default function Index({ time }) {
-  const { path } = useRouter();
+export default function Index() {
+  const [apiData, setApiData] = useState(null);
+
+  const fetchHello = async () => {
+    const res = await fetch('/api/hello');
+    const data = await res.json();
+    setApiData(data);
+  };
+
   return (
     <div>
-      <h1>首页</h1>
-      <p>当前路径: {path}</p>
-      <p>服务器时间: {time}</p>
-      <Link href="/about" style={{color: 'blue'}}>去关于页</Link>
-      <br/>
-      <Link href="/post/123">查看动态文章 123</Link>
+      <h1>全栈能力测试</h1>
+      <button onClick={fetchHello}>点击调用后端接口 (/api/hello)</button>
+
+      {apiData && (
+        <div style={{ marginTop: '20px', background: '#f0f0f0', padding: '10px' }}>
+          <p>后端消息: {apiData.message}</p>
+          <p>后端时间: {apiData.time}</p>
+        </div>
+      )}
+
+      <hr />
+      <Link href="/about">去关于页</Link>
     </div>
   );
-}
-
-export async function getServerSideProps() {
-  return { time: new Date().toLocaleTimeString() };
 }
