@@ -18,7 +18,7 @@ export default function MyApp({ Component, pageProps }) {
       </main>
 
       <footer style={{ marginTop: '50px', color: '#888' }}>
-        © 2024 My Mini Next Framework
+        © 2024 My Velo Framework
       </footer>
     </div>
   );

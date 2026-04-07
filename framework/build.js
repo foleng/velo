@@ -72,7 +72,7 @@ async function runBuild() {
           <head>
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
-            <title>Mini Next SSG</title>
+            <title>Velo SSG</title>
           </head>
           <body>
             <div id="root">${content}</div>

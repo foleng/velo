@@ -6,7 +6,7 @@ export default function About() {
   return (
     <div>
       <Head>
-        <title>关于我们 - Mini Next</title>
+        <title>关于我们 - Velo</title>
         <meta name="description" content="这是一个手写的全栈框架" />
       </Head>
       <Link href="/">回到首页</Link>

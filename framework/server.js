@@ -166,7 +166,7 @@ async function startServer() {
         res.send(`
           <!DOCTYPE html>
           <html>
-            <head><meta charset="utf-8"><title>Mini Next</title></head>
+            <head><meta charset="utf-8"><title>Velo</title></head>
             <body>
               <div id="root">${content}</div>
               <script>
